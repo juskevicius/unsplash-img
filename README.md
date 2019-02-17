@@ -1,3 +1,31 @@
+# Unsplash image search application 
+
+This application provides the user with functionality to do a simple image search. Images are fetched from Unsplash using Unsplash Image API.
+
+## Getting started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Installing
+
+```
+npm install
+```
+
+Make sure to visit https://unsplash.com/developers, create an account and get Unsplash client ID (Access Key).
+Create .env file in the root application directory. This file will contain your Unsplash client ID. Variable that holds your client ID should be named REACT_APP_UNSPLASH_API_KEY.
+
+```
+REACT_APP_UNSPLASH_API_KEY=y6a6sdf..................
+```
+
+Enjoy the app!
+
+
+
+
+### Default Create React App readme:
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
