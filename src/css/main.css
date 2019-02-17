@@ -1,0 +1,239 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+/* changing the default box-sizing property */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/* custom styles */
+body {
+  background-color: #fdfdfd;
+}
+
+.title {
+  padding: 40px 15px 20px 15px;
+  text-align: center;
+  font-size: 45px;
+  color: #5cb290;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.title svg {
+  margin-right: 10px;
+}
+
+.search {
+  padding: 40px;
+  padding-bottom: 0;
+  width: 100%;
+}
+
+.search .search__input {
+  width: 100%;
+  border: 1px solid #eeeeee;
+  -webkit-box-shadow: 1px 4px 4px #dbdbdb;
+          box-shadow: 1px 4px 4px #dbdbdb;
+  padding: 15px;
+}
+
+.search .search__input:focus {
+  -webkit-box-shadow: 1px 4px 10px #dbdbdb;
+          box-shadow: 1px 4px 10px #dbdbdb;
+}
+
+.search .search__keywords {
+  display: inline-block;
+  padding: 10px;
+}
+
+.search .keyword {
+  float: left;
+  background-color: #f7f7f7;
+  color: #888888;
+  padding: 4px 10px;
+  margin: 3px 5px;
+  border-radius: 30%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 85%;
+}
+
+.search .keyword i {
+  color: red;
+  font-style: italic;
+  margin-left: 8px;
+}
+
+.search .keyword i:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .search {
+    width: 700px;
+    margin: auto;
+    display: block;
+  }
+}
+
+.button {
+  text-align: center;
+  width: 100%;
+}
+
+.button .button--center {
+  display: inline-block;
+}
+
+.button .button__search, .button .button__save {
+  border: none;
+  background-color: #f7f7f7;
+  padding: 15px 55px;
+  margin: 30px;
+  color: #888888;
+  font-weight: bold;
+  margin: 5px 20px;
+}
+
+.button .button__search:hover, .button .button__save:hover {
+  cursor: pointer;
+}
+
+.query {
+  padding: 30px 80px;
+}
+
+.query .query__title {
+  font-family: "Open Sans", sans-serif;
+  color: #888888;
+  padding: 10px;
+}
+
+.query .query__unit {
+  width: 100%;
+  display: inline-block;
+  padding: 15px;
+  margin: 5px 0;
+  background-color: #f7f7f7;
+}
+
+.query .query__unit:hover {
+  cursor: pointer;
+}
+
+.query .query__unit:hover div, .query .query__unit:hover span {
+  color: #5cb290;
+}
+
+.query .query__index, .query .query__keyword {
+  float: left;
+  margin: 0 5px;
+  font-family: "Open Sans", sans-serif;
+  color: #888888;
+  font-size: 85%;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .query {
+    width: 700px;
+    margin: auto;
+    display: block;
+  }
+}
+
+.image .image__container {
+  width: 50%;
+  float: left;
+  overflow: hidden;
+}
+
+.image .image__not-found {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  color: #888888;
+  font-size: 24px;
+  padding: 20px;
+  line-height: 40px;
+}
+
+@media (min-width: 768px) {
+  .image .image__container {
+    width: 33.3%;
+  }
+}
+
+.dotLoader div {
+  display: block;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.dotLoader div div {
+  background-color: #5cb290;
+}
+/*# sourceMappingURL=main.css.map */

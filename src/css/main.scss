@@ -1,0 +1,254 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+/* changing the default box-sizing property */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* custom styles */
+
+$colors: (
+  accent: #5cb290,
+  backgr: #fdfdfd,
+  btn: #f7f7f7,
+  font: #888888,
+);
+
+$main-font: 'Open Sans', sans-serif;
+
+@function color($color-name) {
+  @return map-get($colors, $color-name)
+}
+
+$desktop: 768px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content
+  }
+}
+
+body {
+  background-color: color(backgr);
+}
+
+
+.title {
+  padding: 40px 15px 20px 15px;
+  text-align: center;
+  font-size: 45px;
+  color: color(accent);
+  font-family: 'Ubuntu', sans-serif;
+  svg {
+    margin-right: 10px;
+  }
+}
+
+
+.search {
+  padding: 40px;
+  padding-bottom: 0;
+  width: 100%;
+
+  .search__input {
+    width: 100%;
+    border: 1px solid #eeeeee;
+    box-shadow: 1px 4px 4px #dbdbdb;
+    padding: 15px;
+  }
+
+  .search__input:focus {
+    box-shadow: 1px 4px 10px #dbdbdb;
+  }
+
+  .search__keywords {
+    display: inline-block;
+    padding: 10px;
+  }
+  
+  .keyword {
+    float: left;
+    background-color: color(btn);
+    color: color(font);
+    padding: 4px 10px;
+    margin: 3px 5px;
+    border-radius: 30%;
+    font-family: $main-font;
+    font-size: 85%;
+  }
+
+  .keyword i {
+    color: red;
+    font-style: italic;
+    margin-left: 8px;
+  }
+
+  .keyword i:hover {
+    cursor: pointer;
+  }
+
+  @include desktop {
+    width: 700px;
+    margin: auto;
+    display: block;
+  }
+}
+
+
+.button {
+  text-align: center;
+  width: 100%;
+
+  .button--center {
+    display: inline-block;
+  }
+
+  .button__search, .button__save {
+    border: none;
+    background-color: color(btn);
+    padding: 15px 55px;
+    margin: 30px;
+    color: color(font);
+    font-weight: bold;
+    margin: 5px 20px;
+  }
+
+  .button__search:hover, .button__save:hover {
+    cursor: pointer;
+  }
+}
+
+
+.query {
+  padding: 30px 80px;
+
+  .query__title {
+    font-family: $main-font;
+    color: color(font);
+    padding: 10px;
+  }
+
+  .query__unit {
+    width: 100%;
+    display: inline-block;
+    padding: 15px;
+    margin: 5px 0;
+    background-color: color(btn);
+  }
+
+  .query__unit:hover {
+    cursor: pointer;
+  }
+
+  .query__unit:hover div, .query__unit:hover span {
+    color: color(accent);
+  }
+
+  .query__index, .query__keyword {
+    float: left;
+    margin: 0 5px;
+    font-family: $main-font;
+    color: color(font);
+    font-size: 85%;
+    text-decoration: underline;
+  }
+
+  @include desktop {
+    width: 700px;
+    margin: auto;
+    display: block;
+  }
+}
+
+
+.image {
+  .image__container {
+    width: 50%;
+    float: left;
+    overflow: hidden;
+  }
+
+  .image__not-found {
+    text-align: center;
+    font-family: $main-font;
+    color: color(font);
+    font-size: 24px;
+    padding: 20px;
+    line-height: 40px;
+  }
+
+  @include desktop {
+    .image__container {
+      width: 33.3%;
+    }
+  }
+}
+
+
+.dotLoader {
+  div {
+    display: block;
+    margin: 0 auto;
+    padding: 40px;
+    div {
+      background-color: color(accent);
+    }
+  }  
+}
